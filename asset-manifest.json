@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cab04838.css",
+    "main.js": "/static/js/main.8964b61c.js",
+    "static/js/592.e15e874f.chunk.js": "/static/js/592.e15e874f.chunk.js",
+    "static/media/MingCute.svg?jung08": "/static/media/MingCute.0cb605b0c925c16778d5.svg",
+    "static/media/MingCute.eot?jung08": "/static/media/MingCute.146de08695ae7dfe3c68.eot",
+    "static/media/MingCute.woff?jung08": "/static/media/MingCute.c0c1141f137a63eef594.woff",
+    "static/media/MingCute.ttf?jung08": "/static/media/MingCute.1fa9f620def1e95753ac.ttf",
+    "static/media/auth_background.webp": "/static/media/auth_background.9bcc9c0ac2d84e7868c1.webp",
+    "static/media/not_found.webp": "/static/media/not_found.b1a2c519ecda646d7b02.webp",
+    "static/media/Urbanist-ExtraBoldItalic.ttf": "/static/media/Urbanist-ExtraBoldItalic.14ccab1531e22873d998.ttf",
+    "static/media/Urbanist-ExtraLightItalic.ttf": "/static/media/Urbanist-ExtraLightItalic.a523ea6671fffbdfa5af.ttf",
+    "static/media/Urbanist-SemiBoldItalic.ttf": "/static/media/Urbanist-SemiBoldItalic.c3b5a62f11b33e89cda7.ttf",
+    "static/media/Urbanist-MediumItalic.ttf": "/static/media/Urbanist-MediumItalic.608c8af2c29d027e695b.ttf",
+    "static/media/Urbanist-LightItalic.ttf": "/static/media/Urbanist-LightItalic.81ad57c63b54fd62dbcd.ttf",
+    "static/media/Urbanist-BlackItalic.ttf": "/static/media/Urbanist-BlackItalic.36a91e6d70fa42ea2713.ttf",
+    "static/media/Urbanist-Italic.ttf": "/static/media/Urbanist-Italic.74c72951661acd05ec8e.ttf",
+    "static/media/Urbanist-BoldItalic.ttf": "/static/media/Urbanist-BoldItalic.4f34d0aedad6dc4f9f30.ttf",
+    "static/media/Urbanist-ThinItalic.ttf": "/static/media/Urbanist-ThinItalic.d6faa2a7983fef850103.ttf",
+    "static/media/Urbanist-ExtraBold.ttf": "/static/media/Urbanist-ExtraBold.5513c4b571d2e96c3849.ttf",
+    "static/media/Urbanist-ExtraLight.ttf": "/static/media/Urbanist-ExtraLight.4f8bc98d9f3a5389db31.ttf",
+    "static/media/Urbanist-Light.ttf": "/static/media/Urbanist-Light.55ed2929e37cd5fd9b62.ttf",
+    "static/media/Urbanist-Medium.ttf": "/static/media/Urbanist-Medium.934caf896c405316f809.ttf",
+    "static/media/Urbanist-Black.ttf": "/static/media/Urbanist-Black.d72623c1a3c3abdec87e.ttf",
+    "static/media/Urbanist-SemiBold.ttf": "/static/media/Urbanist-SemiBold.7da44a6d82965ce3d957.ttf",
+    "static/media/Urbanist-Regular.ttf": "/static/media/Urbanist-Regular.e75437051d196cb77fef.ttf",
+    "static/media/Urbanist-Bold.ttf": "/static/media/Urbanist-Bold.578c7c1d4785d6cd2fa5.ttf",
+    "static/media/Urbanist-Thin.ttf": "/static/media/Urbanist-Thin.16cdeb2a578689a5f90a.ttf",
+    "static/media/Gunterz-Medium.otf": "/static/media/Gunterz-Medium.f0358d3edebbd8988b14.otf",
+    "static/media/exeltis.svg": "/static/media/exeltis.13caeb3a80ed39ef436164d51f433fd3.svg",
+    "static/media/exeltis_white.svg": "/static/media/exeltis_white.11042d7742a1246fb4cbeb44a6be4398.svg",
+    "index.html": "/index.html",
+    "main.cab04838.css.map": "/static/css/main.cab04838.css.map",
+    "main.8964b61c.js.map": "/static/js/main.8964b61c.js.map",
+    "592.e15e874f.chunk.js.map": "/static/js/592.e15e874f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cab04838.css",
+    "static/js/main.8964b61c.js"
+  ]
+}
