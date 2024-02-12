@@ -1,0 +1,19 @@
+.sidebar_container {
+  width: 200px;
+  height: 100vh;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  color: black;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 48px;
+  align-items: stretch;
+  background-color: lighten(#ECECEC, 3%);
+  /* background-color: #FFFEFC; */
+}
+
+.sidebar_logo {
+  height: 36px;
+  /* align-self: center; */
+}

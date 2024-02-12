@@ -1,0 +1,324 @@
+:root {
+    --size: 12px;
+}
+
+.light {
+    --background: #fafbfc;
+    --backgroundAlt: #ffffff;
+    --foreground: #000000;
+    --foregroundSecondary: #686869;
+    --elementBackgroundSecondary: #f6f7f8;
+    --border: #e1e4e8;
+    --color: #24292e;
+    --contrast: 00, 00, 00;
+    --elementBlue: #367af7;
+    --selectedBox: #d3eafd;
+}
+
+.dark {
+    --background: #232b33;
+    --backgroundAlt: #333a42;
+    --foreground: #ffffff;
+    --foregroundSecondary: #c2c9cf;
+    --elementBackgroundSecondary: #232b33;
+    --border: #282828;
+    --color: #24292e;
+    --contrast: 255, 255, 255;
+    --elementBlue: #4781c1;
+    --selectedBox: #768ea1;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-BlackItalic.ttf") format("truetype");
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-ExtraBoldItalic.ttf") format("truetype");
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-ExtraLightItalic.ttf") format("truetype");
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-MediumItalic.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/Urbanist-ThinItalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Gunterz";
+    src: url("../fonts/Gunterz-Medium.otf") format("opentype");
+    font-weight: 500;
+}
+
+body {
+    margin: 0;
+    font-family: "Urbanist", sans-serif;
+    /*font-family: "Helvetica Now Display", sans-serif;*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+.rc-border-b-2,
+.rc-border-l-2,
+.rc-border-t-2 {
+    border-color: rgba(var(--contrast), 0.1) !important;
+}
+
+.rc-bg-white {
+    background-color: var(--backgroundAlt);
+}
+
+button.rc-cursor-pointer {
+    padding: 6px 12px;
+    background-color: var(--backgroundAlt);
+    color: var(--foregroundSecondary);
+    font-size: 12px;
+    border: 1px solid var(--elementBlue);
+    border-radius: 6px;
+}
+
+button.rc-cursor-pointer:hover {
+    background-color: rgba(var(--contrast), 0.05);
+}
+button.rc-cursor-pointer:active {
+    background-color: var(--elementBlue);
+    color: var(--background);
+}
+
+div.rc-ml-4.rc-mr-4.rc-w-32.rc-text-center {
+    background-color: var(--elementBackgroundSecondary);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-inline: 12px;
+}
+
+.rc-divide-gray-200.rc-divide-y.rc-overflow-hidden.rc-max-h-36.rc-overflow-y-auto
+    > div {
+    border-color: blue !important;
+}
+
+.rc-flex.rc-justify-end.rc-mb-4 {
+    margin-bottom: 0;
+}
+
+/* fix editor */
+.ce-inline-toolbar {
+    background-color: var(--backgroundAlt);
+    border: 1px solid rgba(var(--contrast), 0.1);
+}
+
+.ce-inline-tool:hover {
+    background-color: rgba(var(--contrast), 0.05) !important;
+}
+
+.ce-inline-tool--active {
+    background-color: rgba(var(--contrast), 0.1) !important;
+}
+
+.ce-toolbar__plus svg path,
+.ce-toolbar__settings-btn svg path {
+    stroke: var(--foregroundSecondary);
+}
+
+.ce-toolbar__settings-btn:hover,
+.ce-toolbar__plus:hover {
+    background-color: rgba(var(--contrast), 0.05) !important;
+}
+
+.ce-block--selected .ce-block__content {
+    background-color: var(--selectedBox) !important;
+}
+
+.codex-editor {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    flex: 1;
+    padding: 12px;
+}
+
+h1 {
+    font-size: 2em; /* 32px */
+    font-weight: bolder;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.5em; /* 24px */
+    font-weight: bolder;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 1.17em; /* 18.72px */
+    font-weight: bolder;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+h4 {
+    font-size: 1em; /* 16px */
+    font-weight: bolder;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+h5 {
+    font-size: 0.83em; /* 13.28px */
+    font-weight: bolder;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+h6 {
+    font-size: 0.67em; /* 10.72px */
+    font-weight: bolder;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+/*p {*/
+/*  display: block;*/
+/*  margin-block-start: 1em;*/
+/*  margin-block-end: 1em;*/
+/*  margin-inline-start: 0px;*/
+/*  margin-inline-end: 0px;*/
+/*}*/
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
