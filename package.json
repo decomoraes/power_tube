@@ -2,7 +2,7 @@
     "name": "PowerTube",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://powertu.be/",
+    "homepage": "https://decomoraes.github.io/power_tube/",
     "dependencies": {
         "@editorjs/editorjs": "^2.27.0",
         "@fullcalendar/core": "^6.1.4",
@@ -52,7 +52,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "predeploy": "npm run build",
-        "deploy": "echo app.studium.academy > ./build/CNAME && gh-pages -d build",
+        "deploy": "./build/CNAME && gh-pages -d build",
         "storybook": "start-storybook -p 6006 -s public",
         "build-storybook": "build-storybook -s public"
     },
