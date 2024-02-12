@@ -63,15 +63,22 @@ export default function SignInView() {
                 // gap={styles.size(10)}
                 className={classes.content}>
                 <FlexBox
-                    column
-                    gap={styles.size(2.5)}
-                    style={{
-                        // width: styles.size(30),
-                        flex: 1,
-                        alignItems: "stretch",
-                    }}
+                    row
+                    flex={1}
+                    shrink={0}
+                    crossAxisAlignment="center"
                     mainAxisAlignment="center">
-                    {/* <TextField
+                    <FlexBox
+                        column
+                        gap={styles.size(2.5)}
+                        style={{
+                            // width: styles.size(30),
+                            flex: 1,
+                            alignItems: "stretch",
+                            maxWidth: styles.size(70),
+                        }}
+                        mainAxisAlignment="center">
+                        {/* <TextField
                         type="email"
                         size="large"
                         placeholder={itn.emailPlaceholder}
@@ -100,37 +107,57 @@ export default function SignInView() {
                             {itn.recoverPassword}
                         </div>
                     </FlexBox> */}
-                    <Card
-                        color="lilac"
-                        style={{
-                            flexDirection: "column",
-                            alignItems: "center",
-                            paddingInline: styles.size(9),
-                            gap: styles.size(2.5),
-                            marginInline: styles.size(8),
-                        }}>
-                        <p style={{ textAlign: "center", fontWeight: 400 }}>
-                            Fazer login na minha conta do Canal ou empresa, para
-                            postar vagas e encontrar profissionais.
-                        </p>
-                        <Button>Login como canal</Button>
-                    </Card>
-                    <Card
-                        color="lilac"
-                        style={{
-                            flexDirection: "column",
-                            alignItems: "center",
-                            paddingInline: styles.size(9),
-                            gap: styles.size(2.5),
-                            marginInline: styles.size(8),
-                        }}>
-                        <p style={{ textAlign: "center", fontWeight: 400 }}>
-                            Quero fazer login na minha conta Profissional, para
-                            encontrar Jobs e me candidatar.
-                        </p>
-                        <Button color="salmon">Login como profissional</Button>
-                    </Card>
-                    {/* <button
+                        <Card
+                            color="lilac"
+                            style={{
+                                flexDirection: "column",
+                                alignItems: "center",
+                                gap: styles.size(2.5),
+                                paddingInline: styles.size(2),
+                                marginInline:
+                                    width > 1400
+                                        ? styles.size(8)
+                                        : styles.size(2),
+                            }}>
+                            <p
+                                style={{
+                                    textAlign: "center",
+                                    fontWeight: 400,
+                                    marginInline: styles.size(2),
+                                    maxWidth: styles.size(25),
+                                }}>
+                                Fazer login na minha conta do Canal ou empresa,
+                                para postar vagas e encontrar profissionais.
+                            </p>
+                            <Button>Login como canal</Button>
+                        </Card>
+                        <Card
+                            color="lilac"
+                            style={{
+                                flexDirection: "column",
+                                alignItems: "center",
+                                gap: styles.size(2.5),
+                                paddingInline: styles.size(2),
+                                marginInline:
+                                    width > 1400
+                                        ? styles.size(8)
+                                        : styles.size(2),
+                            }}>
+                            <p
+                                style={{
+                                    textAlign: "center",
+                                    fontWeight: 400,
+                                    marginInline: styles.size(2),
+                                    maxWidth: styles.size(25),
+                                }}>
+                                Quero fazer login na minha conta Profissional,
+                                para encontrar Jobs e me candidatar.
+                            </p>
+                            <Button color="salmon">
+                                Login como profissional
+                            </Button>
+                        </Card>
+                        {/* <button
                         className={className([
                             classes.submitButton,
                             viewModel.submitButtonDisabled()
@@ -143,8 +170,9 @@ export default function SignInView() {
                         }>
                         {itn.signIn.toUpperCase()}
                     </button> */}
+                    </FlexBox>
                 </FlexBox>
-                {width > 992 ? (
+                {width > 1400 ? (
                     <FlexBox
                         style={{
                             display: "flex",
