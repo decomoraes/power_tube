@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/power_tube/static/css/main.14e152d7.css",
-    "main.js": "/power_tube/static/js/main.662ae3a7.js",
+    "main.js": "/power_tube/static/js/main.1a01eaa4.js",
     "static/js/592.e15e874f.chunk.js": "/power_tube/static/js/592.e15e874f.chunk.js",
     "static/media/MingCute.svg?jung08": "/power_tube/static/media/MingCute.0cb605b0c925c16778d5.svg",
     "static/media/MingCute.eot?jung08": "/power_tube/static/media/MingCute.146de08695ae7dfe3c68.eot",
@@ -41,11 +41,11 @@
     "static/media/exeltis_white.svg": "/power_tube/static/media/exeltis_white.11042d7742a1246fb4cbeb44a6be4398.svg",
     "index.html": "/power_tube/index.html",
     "main.14e152d7.css.map": "/power_tube/static/css/main.14e152d7.css.map",
-    "main.662ae3a7.js.map": "/power_tube/static/js/main.662ae3a7.js.map",
+    "main.1a01eaa4.js.map": "/power_tube/static/js/main.1a01eaa4.js.map",
     "592.e15e874f.chunk.js.map": "/power_tube/static/js/592.e15e874f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.14e152d7.css",
-    "static/js/main.662ae3a7.js"
+    "static/js/main.1a01eaa4.js"
   ]
 }
