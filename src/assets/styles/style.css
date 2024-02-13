@@ -155,14 +155,72 @@
 }
 
 @font-face {
+    font-family: "Codec Pro News";
+    src: url("../fonts/Codec-Pro-News.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Codec Pro";
+    src: url("../fonts/Codec-Pro-Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+/* region Gunterz */
+@font-face {
     font-family: "Gunterz";
-    src: url("../fonts/Gunterz-Medium.otf") format("opentype");
+    src: url("../fonts/Gunterz-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Gunterz";
+    src: url("../fonts/Gunterz-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Gunterz";
+    src: url("../fonts/Gunterz-Medium.woff2") format("woff2");
     font-weight: 500;
 }
 
+@font-face {
+    font-family: "Gunterz";
+    src: url("../fonts/Gunterz-MediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Gunterz";
+    src: url("../fonts/Gunterz-Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Gunterz";
+    src: url("../fonts/Gunterz-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Gunterz";
+    src: url("../fonts/Gunterz-Black.woff2") format("woff2");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Gunterz";
+    src: url("../fonts/Gunterz-BlackItalic.woff2") format("woff2");
+    font-weight: 900;
+    font-style: italic;
+}
+/* endregion Gunterz */
+
 body {
     margin: 0;
-    font-family: "Urbanist", sans-serif;
+    font-family: "Codec Pro News", sans-serif;
     /*font-family: "Helvetica Now Display", sans-serif;*/
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -321,4 +379,9 @@ h6 {
     to {
         stroke-dashoffset: 0;
     }
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
 }

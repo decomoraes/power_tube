@@ -15,14 +15,24 @@ export interface SignInViewModel {
     setPathname: (pathname: string | undefined) => void;
     searchParams: URLSearchParams;
     setSearchParams: (searchParams: URLSearchParams) => void;
+    signInAs: "channel" | "professional" | null;
+    setSignInAs: (value: "channel" | "professional" | null) => void;
     store: Store;
     setStore: (store: Store) => void;
-    notification: (notification: string, status: "error" | "success" | "info" | "warning") => any;
-    setNotification: (notification: (notification: string, status: "error" | "success" | "info" | "warning") => any) => void;
+    notification: (
+        notification: string,
+        status: "error" | "success" | "info" | "warning"
+    ) => any;
+    setNotification: (
+        notification: (
+            notification: string,
+            status: "error" | "success" | "info" | "warning"
+        ) => any
+    ) => void;
     onInitialized: (
         store: Store,
         pathname: string | undefined,
-        searchParams: URLSearchParams,
+        searchParams: URLSearchParams
     ) => void;
     onSignIn: () => Promise<void>;
     submitButtonDisabled: () => boolean;
@@ -31,20 +41,30 @@ export interface SignInViewModel {
 // region SignInViewModel
 const useSignInViewModel = (): SignInViewModel => {
     // region properties
-     const [email, setEmail] = useState<string>("");
-     const [password, setPassword] = useState<string>("");
-     const [loading, setLoading] = useState<boolean>(true);
-     const [pathname, setPathname] = useState<string | undefined>(undefined);
-     const [searchParams, setSearchParams] = useState<URLSearchParams>(new URLSearchParams());
-     const [store, setStore] = useState<Store>(new Store());
-     const [notification, setNotification] = useState<(notification: string, status: "error" | "success" | "info" | "warning") => any>(() => { });
+    const [email, setEmail] = useState<string>("");
+    const [signInAs, setSignInAs] = useState<"channel" | "professional" | null>(
+        null
+    );
+    const [password, setPassword] = useState<string>("");
+    const [loading, setLoading] = useState<boolean>(true);
+    const [pathname, setPathname] = useState<string | undefined>(undefined);
+    const [searchParams, setSearchParams] = useState<URLSearchParams>(
+        new URLSearchParams()
+    );
+    const [store, setStore] = useState<Store>(new Store());
+    const [notification, setNotification] = useState<
+        (
+            notification: string,
+            status: "error" | "success" | "info" | "warning"
+        ) => any
+    >(() => {});
     // endregion
 
     // region onInitialized
     function onInitialized(
         pStore: Store,
         pPathname: string | undefined,
-        pSearchParams: URLSearchParams,
+        pSearchParams: URLSearchParams
     ) {
         setStore(pStore);
         setPathname(pathname);
@@ -54,7 +74,7 @@ const useSignInViewModel = (): SignInViewModel => {
 
     // region signIn
     async function onSignIn() {
-        const response = await signIn(email ?? "", password ?? "")
+        const response = await signIn(email ?? "", password ?? "");
         if (response.status >= 300 || response.payload === undefined) {
             return notification(response.message ?? "error", "error");
         }
@@ -81,7 +101,9 @@ const useSignInViewModel = (): SignInViewModel => {
         pathname,
         setPathname,
         searchParams,
+        signInAs,
         setSearchParams,
+        setSignInAs,
         store,
         setStore,
         notification,
@@ -89,8 +111,8 @@ const useSignInViewModel = (): SignInViewModel => {
         onInitialized,
         onSignIn,
         submitButtonDisabled,
-    }
-}
+    };
+};
 // endregion
 
 export default useSignInViewModel;

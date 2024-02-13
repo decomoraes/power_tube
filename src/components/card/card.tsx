@@ -64,7 +64,6 @@ const useStyles = createUseStyles({
         fontSize: styles.size(1),
         fontWeight: "bold",
         color: "black",
-        cursor: "pointer",
         paddingInline: styles.size(5.5),
         paddingBlock: styles.size(3.75),
         transition:

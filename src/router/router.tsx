@@ -47,9 +47,7 @@ const Router = observer(() => {
             element: !!store.authStore.token ? (
                 <MainLayout header="" />
             ) : (
-                <Navigate
-                    to={`/sign-in/${store.institutionStore?.institution.username}`}
-                />
+                <Navigate to={`/sign-in/`} />
             ),
             children: [
                 {

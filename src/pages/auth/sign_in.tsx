@@ -1,17 +1,12 @@
 // region imports
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
-import { InstitutionUnit } from "../../domains/institution";
-import DropDown from "../../components/drop_down/drop_down";
-import TextField from "../../components/text_field/text_field";
 import { createUseStyles, useTheme } from "react-jss";
 import * as styles from "../../utils/styles";
 import { FlexBox } from "../../components/authdoc_ui";
 import useWindowDimensions from "../../utils/useWindowDimensions";
 import { observer } from "mobx-react";
-import CheckBox from "../../components/check_box/check_box";
-import { useContext, useEffect, useMemo } from "react";
+import { Fragment, useContext, useEffect, useMemo } from "react";
 import { StoreContext } from "../../store";
-import SignInViewModel from "../../view_models/auth/sign_in_view_model";
 import { useNotifications } from "reapop";
 import { ItnType, LanguageContext, useItn } from "../../utils/itn";
 import { itns, messages } from "./texts/sign_in.itn";
@@ -20,6 +15,7 @@ import Logo from "../../assets/images/Logo";
 import useSignInViewModel from "../../view_models/auth/f_sign_in_view_model";
 import Button from "../../components/button/button";
 import Card from "../../components/card/card";
+import TextField from "../../components/text_field/text_field";
 // endregion
 
 // region SignInView
@@ -52,12 +48,12 @@ export default function SignInView() {
     // region render
     return (
         <FlexBox
-            column
             gap={styles.size(10)}
             crossAxisAlignment="center"
             className={classes.container}
             style={{ height: `${height}px` }}>
             <FlexBox
+                row
                 mainAxisAlignment="center"
                 flex={1}
                 // gap={styles.size(10)}
@@ -69,7 +65,6 @@ export default function SignInView() {
                     crossAxisAlignment="center"
                     mainAxisAlignment="center">
                     <FlexBox
-                        column
                         gap={styles.size(2.5)}
                         style={{
                             // width: styles.size(30),
@@ -107,57 +102,103 @@ export default function SignInView() {
                             {itn.recoverPassword}
                         </div>
                     </FlexBox> */}
-                        <Card
-                            color="lilac"
-                            style={{
-                                flexDirection: "column",
-                                alignItems: "center",
-                                gap: styles.size(2.5),
-                                paddingInline: styles.size(2),
-                                marginInline:
-                                    width > 1400
-                                        ? styles.size(8)
-                                        : styles.size(2),
-                            }}>
-                            <p
-                                style={{
-                                    textAlign: "center",
-                                    fontWeight: 400,
-                                    marginInline: styles.size(2),
-                                    maxWidth: styles.size(25),
-                                }}>
-                                Fazer login na minha conta do Canal ou empresa,
-                                para postar vagas e encontrar profissionais.
-                            </p>
-                            <Button>Login como canal</Button>
-                        </Card>
-                        <Card
-                            color="lilac"
-                            style={{
-                                flexDirection: "column",
-                                alignItems: "center",
-                                gap: styles.size(2.5),
-                                paddingInline: styles.size(2),
-                                marginInline:
-                                    width > 1400
-                                        ? styles.size(8)
-                                        : styles.size(2),
-                            }}>
-                            <p
-                                style={{
-                                    textAlign: "center",
-                                    fontWeight: 400,
-                                    marginInline: styles.size(2),
-                                    maxWidth: styles.size(25),
-                                }}>
-                                Quero fazer login na minha conta Profissional,
-                                para encontrar Jobs e me candidatar.
-                            </p>
-                            <Button color="salmon">
-                                Login como profissional
-                            </Button>
-                        </Card>
-                        {/* <button
+                        {!viewModel.signInAs ? (
+                            <Fragment>
+                                <FlexBox crossAxisAlignment="center">
+                                    <h1
+                                        style={{
+                                            fontSize: "28px",
+                                            fontFamily: "Gunterz",
+                                            lineHeight: "23px",
+                                            marginBottom: "15px",
+                                            color: "#272727",
+                                        }}>
+                                        Login
+                                    </h1>
+                                    <h2
+                                        style={{
+                                            fontSize: "20px",
+                                            fontFamily: "Codec Pro News",
+                                            marginBottom: "0px",
+                                            color: "#272727",
+                                            fontWeight: 300,
+                                        }}>
+                                        Selecione em qual conta você quer
+                                        entrar.
+                                    </h2>
+                                </FlexBox>
+                                <Card
+                                    color="lilac"
+                                    style={{
+                                        flexDirection: "column",
+                                        alignItems: "center",
+                                        gap: styles.size(2.5),
+                                        paddingInline: styles.size(2),
+                                        marginInline:
+                                            width > 1400
+                                                ? styles.size(8)
+                                                : styles.size(2),
+                                    }}>
+                                    <p
+                                        style={{
+                                            textAlign: "center",
+                                            fontWeight: 300,
+                                            marginInline: styles.size(2),
+                                            maxWidth: styles.size(25),
+                                            fontSize: styles.size(1),
+                                            fontFamily: "Codec Pro News",
+                                        }}>
+                                        Fazer login na minha conta do Canal ou
+                                        empresa, para postar vagas e encontrar
+                                        profissionais.
+                                    </p>
+                                    <Button
+                                        onClick={() => {
+                                            viewModel.setSignInAs(
+                                                "professional"
+                                            );
+                                        }}>
+                                        Login como canal
+                                    </Button>
+                                </Card>
+                                <Card
+                                    color="lilac"
+                                    style={{
+                                        flexDirection: "column",
+                                        alignItems: "center",
+                                        gap: styles.size(2.5),
+                                        paddingInline: styles.size(2),
+                                        marginInline:
+                                            width > 1400
+                                                ? styles.size(8)
+                                                : styles.size(2),
+                                    }}>
+                                    <p
+                                        style={{
+                                            textAlign: "center",
+                                            fontWeight: 300,
+                                            marginInline: styles.size(2),
+                                            maxWidth: styles.size(25),
+                                            fontSize: styles.size(1),
+                                            fontFamily: "Codec Pro News",
+                                        }}>
+                                        Quero fazer login na minha conta
+                                        Profissional, para encontrar Jobs e me
+                                        candidatar.
+                                    </p>
+                                    <Button
+                                        color="salmon"
+                                        onClick={() => {
+                                            viewModel.setSignInAs("channel");
+                                        }}>
+                                        Login como profissional
+                                    </Button>
+                                </Card>
+                                <span style={{ alignSelf: "center" }}>
+                                    Não tem uma conta?{" "}
+                                    <strong>Inscreva-se</strong>
+                                </span>
+                                {/* <button
                         className={className([
                             classes.submitButton,
                             viewModel.submitButtonDisabled()
@@ -170,10 +211,39 @@ export default function SignInView() {
                         }>
                         {itn.signIn.toUpperCase()}
                     </button> */}
+                            </Fragment>
+                        ) : (
+                            <FlexBox
+                                gap={styles.size(2.5)}
+                                style={{ alignSelf: "center" }}>
+                                <span
+                                    style={{
+                                        fontFamily: "Gunterz",
+                                        fontWeight: 700,
+                                        fontSize: "26px",
+                                    }}>
+                                    Inscreva-se como Dono ou
+                                    <br />
+                                    responsável por um canal
+                                </span>
+                                <span
+                                    style={{
+                                        fontFamily: "Codec Pro News",
+                                        // fontWeight: 700,
+                                        fontSize: "20px",
+                                    }}>
+                                    Encontre os melhores talentos para
+                                    impulsionar
+                                    <br />
+                                    ainda mais o seu canal.
+                                </span>
+                            </FlexBox>
+                        )}
                     </FlexBox>
                 </FlexBox>
-                {width > 1400 ? (
+                {width > 1400 && !viewModel.signInAs ? (
                     <FlexBox
+                        row
                         style={{
                             display: "flex",
                             alignItems: "stretch",
@@ -194,6 +264,55 @@ export default function SignInView() {
                             }}
                         />
                         {/* </FlexBox> */}
+                    </FlexBox>
+                ) : null}
+                {!!viewModel.signInAs ? (
+                    <FlexBox
+                        row
+                        style={{
+                            display: "flex",
+                            alignItems: "stretch",
+                            flexShrink: 0,
+                            backgroundColor: "#ADABF7",
+                        }}
+                        crossAxisAlignment="center"
+                        mainAxisAlignment="center"
+                        flex={1}>
+                        <FlexBox
+                            gap={styles.size(2.5)}
+                            crossAxisAlignment="center"
+                            mainAxisAlignment="center">
+                            <Card
+                                color="lilac"
+                                style={{
+                                    gap: styles.size(2.5),
+                                }}>
+                                <Button
+                                    color="salmon"
+                                    onClick={() => {
+                                        viewModel.setSignInAs("channel");
+                                    }}>
+                                    Faça login com o YouTube
+                                </Button>
+                                <span
+                                    onClick={() => {
+                                        viewModel.setSignInAs(null);
+                                    }}
+                                    style={{
+                                        fontFamily: "Gunterz",
+                                        alignSelf: "center",
+                                    }}>
+                                    Ou entre com um email
+                                </span>
+                                <TextField
+                                    placeholder="exemplo@email.com"
+                                    showArrow
+                                />
+                            </Card>
+                            <span style={{ alignSelf: "center" }}>
+                                Não tem uma conta? <strong>Inscreva-se</strong>
+                            </span>
+                        </FlexBox>
                     </FlexBox>
                 ) : null}
             </FlexBox>
