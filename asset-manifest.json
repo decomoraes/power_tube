@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/power_tube/static/css/main.59e4f6b6.css",
-    "main.js": "/power_tube/static/js/main.c304cf9b.js",
+    "main.css": "/power_tube/static/css/main.14e152d7.css",
+    "main.js": "/power_tube/static/js/main.662ae3a7.js",
     "static/js/592.e15e874f.chunk.js": "/power_tube/static/js/592.e15e874f.chunk.js",
     "static/media/MingCute.svg?jung08": "/power_tube/static/media/MingCute.0cb605b0c925c16778d5.svg",
     "static/media/MingCute.eot?jung08": "/power_tube/static/media/MingCute.146de08695ae7dfe3c68.eot",
     "static/media/MingCute.woff?jung08": "/power_tube/static/media/MingCute.c0c1141f137a63eef594.woff",
     "static/media/MingCute.ttf?jung08": "/power_tube/static/media/MingCute.1fa9f620def1e95753ac.ttf",
-    "static/media/auth_background.webp": "/power_tube/static/media/auth_background.9bcc9c0ac2d84e7868c1.webp",
+    "static/media/Codec-Pro-News.woff2": "/power_tube/static/media/Codec-Pro-News.932ae1ce6f54cf681463.woff2",
+    "static/media/Codec-Pro-Bold.woff2": "/power_tube/static/media/Codec-Pro-Bold.ca260f1ff8099f3826ce.woff2",
+    "static/media/auth_background.webp": "/power_tube/static/media/auth_background.2cc014cc76756e9b59a0.webp",
     "static/media/not_found.webp": "/power_tube/static/media/not_found.b1a2c519ecda646d7b02.webp",
     "static/media/Urbanist-ExtraBoldItalic.ttf": "/power_tube/static/media/Urbanist-ExtraBoldItalic.14ccab1531e22873d998.ttf",
     "static/media/Urbanist-ExtraLightItalic.ttf": "/power_tube/static/media/Urbanist-ExtraLightItalic.a523ea6671fffbdfa5af.ttf",
@@ -27,16 +29,23 @@
     "static/media/Urbanist-Regular.ttf": "/power_tube/static/media/Urbanist-Regular.e75437051d196cb77fef.ttf",
     "static/media/Urbanist-Bold.ttf": "/power_tube/static/media/Urbanist-Bold.578c7c1d4785d6cd2fa5.ttf",
     "static/media/Urbanist-Thin.ttf": "/power_tube/static/media/Urbanist-Thin.16cdeb2a578689a5f90a.ttf",
-    "static/media/Gunterz-Medium.otf": "/power_tube/static/media/Gunterz-Medium.f0358d3edebbd8988b14.otf",
+    "static/media/Gunterz-MediumItalic.woff2": "/power_tube/static/media/Gunterz-MediumItalic.e922cfd23271083b2b44.woff2",
+    "static/media/Gunterz-BoldItalic.woff2": "/power_tube/static/media/Gunterz-BoldItalic.abc9d0389bfdc7d4af46.woff2",
+    "static/media/Gunterz-Italic.woff2": "/power_tube/static/media/Gunterz-Italic.a80da66df80419c71582.woff2",
+    "static/media/Gunterz-Medium.woff2": "/power_tube/static/media/Gunterz-Medium.e675bcd47bc15eb9f6b6.woff2",
+    "static/media/Gunterz-Bold.woff2": "/power_tube/static/media/Gunterz-Bold.b9b92e616d06cb2fae9e.woff2",
+    "static/media/Gunterz-BlackItalic.woff2": "/power_tube/static/media/Gunterz-BlackItalic.54e6bc1bf3c46f7f6341.woff2",
+    "static/media/Gunterz-Regular.woff2": "/power_tube/static/media/Gunterz-Regular.b158ff706455c5cc5807.woff2",
+    "static/media/Gunterz-Black.woff2": "/power_tube/static/media/Gunterz-Black.f88c8bfd87139a9a39c3.woff2",
     "static/media/exeltis.svg": "/power_tube/static/media/exeltis.13caeb3a80ed39ef436164d51f433fd3.svg",
     "static/media/exeltis_white.svg": "/power_tube/static/media/exeltis_white.11042d7742a1246fb4cbeb44a6be4398.svg",
     "index.html": "/power_tube/index.html",
-    "main.59e4f6b6.css.map": "/power_tube/static/css/main.59e4f6b6.css.map",
-    "main.c304cf9b.js.map": "/power_tube/static/js/main.c304cf9b.js.map",
+    "main.14e152d7.css.map": "/power_tube/static/css/main.14e152d7.css.map",
+    "main.662ae3a7.js.map": "/power_tube/static/js/main.662ae3a7.js.map",
     "592.e15e874f.chunk.js.map": "/power_tube/static/js/592.e15e874f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.59e4f6b6.css",
-    "static/js/main.c304cf9b.js"
+    "static/css/main.14e152d7.css",
+    "static/js/main.662ae3a7.js"
   ]
 }
