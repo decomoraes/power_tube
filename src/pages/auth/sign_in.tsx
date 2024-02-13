@@ -261,6 +261,7 @@ export default function SignInView() {
                             src={require("../../assets/images/auth_background.webp")}
                             style={{
                                 objectFit: "cover",
+                                width: "100%",
                             }}
                         />
                         {/* </FlexBox> */}
